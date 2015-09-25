@@ -61,16 +61,16 @@ p = ax.imshow(hist_br, interpolation = "nearest")
 ax.set_title("2D Color Hist for B and R")
 plt.colorbar(p)
 
-# plt.show()
-# cv2.waitKey(0)
+plt.show()
+cv2.waitKey(0)
 
-# print("2D histogram shape: {}, with {} values".format(hist_br.shape, hist_br.flatten().shape[0]))
+print("2D histogram shape: {}, with {} values".format(hist_br.shape, hist_br.flatten().shape[0]))
 
-hist_3d = cv2.calcHist([image],
-                       [0, 1, 2],
-                       None,
-                       [8, 8, 8],
-                       [0, 256, 0, 256, 0, 256])
-print("#D histogram shape: {}, with {} values".format(hist_3d.shape, hist_3d.flatten().shape[0]))
+# hist_3d = cv2.calcHist([image],
+#                        [0, 1, 2],
+#                        None,
+#                        [8, 8, 8],
+#                        [0, 256, 0, 256, 0, 256])
+# print("3D histogram shape: {}, with {} values".format(hist_3d.shape, hist_3d.flatten().shape[0]))
 # we can't visualize this histogram, but know it's an 8 x 8 x 8 joint
 
